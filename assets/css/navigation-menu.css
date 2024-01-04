@@ -1,0 +1,128 @@
+
+/* 
+White Background
+Black Background
+Links
+Close Button
+======================= 
+*/
+.site-nav-wrapper{
+  justify-self: flex-end;
+}
+
+/* White Background */
+
+.site-navigation-menu{
+  z-index: 2000; 
+  display: block;
+  position: fixed;
+  top: 0; 
+  width: 100vw;
+  height: 100vh;
+  background: #fff; 
+  font-size: 3vw; 
+  background-image: url('../img/jason-leaning-against-wall.png');
+  background-position: bottom right;
+  background-size: clamp(150px, 10vw, 200px);
+  background-repeat: no-repeat;
+  transition: left .25s;
+}
+
+.site-navigation-menu[aria-hidden="true"]{ 
+  left: 100vw;
+}
+
+.site-navigation-menu[aria-hidden="false"]{ 
+  left: 0;
+}
+
+
+
+/* Black Background */
+
+.site-navigation-menu .site-navigation-links{
+  border-radius: 0 0 50% 0;
+  width: 200vw;
+  height: 220vw;
+  top: -110vw;
+  background: #000;
+  color: #fff;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow: hidden;
+  position: absolute;
+  transition: left 1s;
+}
+
+.site-navigation-menu[aria-hidden="false"] .site-navigation-links{
+  left: -110vw;
+}
+
+.site-navigation-menu[aria-hidden="true"] .site-navigation-links{  
+  left: -320vw;
+}
+
+.site-navigation-menu .site-navigation-links > ul{
+  position: absolute; 
+  top: 115vw;
+  left: 120vw;
+  //font-size: max(2em, 50px);
+  font-size: clamp(20px, 5vw, 50px);
+  transition: opacity 1s;
+}
+
+.site-navigation-menu[aria-hidden="true"] .site-navigation-links > ul{
+  opacity: 0;
+}
+
+.site-navigation-menu[aria-hidden="false"] .site-navigation-links > ul{
+  opacity: 1;
+}
+
+.site-navigation-menu .site-navigation-links li{
+  padding: .5em 0;
+}
+
+.site-navigation-menu .site-navigation-links a{
+  color: #fff;
+  text-decoration-line: none;
+}
+
+.site-navigation-menu .site-navigation-links a:hover{
+  color:  #666;
+}
+
+
+/* Close Button */
+
+.site-navigation-menu .close-menu-button{
+  position: fixed;
+  font-size: 10px;
+  top: -1000px;
+  right: 1em;
+  width: 5em;
+  height: 5em; 
+  border: .5em solid #666;
+  z-index: 1000;
+  display: block;
+  border-radius: 50%;
+  background: #fff; 
+  transition: opacity 1s;
+}
+
+.site-navigation-menu[aria-hidden="true"]  .close-menu-button{
+  opacity: 0;
+
+}
+
+.site-navigation-menu[aria-hidden="false"]  .close-menu-button{
+  opacity: 1;
+  top: 1em;
+}
+
+
+.site-navigation-menu .close-icon{
+  width: 2.5em;
+  height: 2.5em;
+}
+ 

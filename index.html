@@ -1,220 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Jason Jollias 2024</title>
-	<style>
-		body{font-family: sans-serif;margin: 0; padding: 0;}
-		body *{
-			margin: 0;
-			padding: 0;
-		}
-		img{
-			display: block;
-			width: 100%;
-			height: auto;
-		}
 
-		button{
-			border: none;
-		} 
-	</style>
-	<style>
-		:root{
-			--gap: 20px;
-			--section-m: var(--top-p) inherit;
-			--section-p: var(--top-p) inherit;
-			--top-p: 50px;
-			--bottom-p: (--top-p);
-			--top-m: (--top-p);
-			--bottom-m: (--top-p);
-		}
-	</style>
-	<style>
-		.site-header{
-			display: grid;
-			grid-template-columns: 100px auto;
-			align-items: center;
-			grid-gap: var(--gap);
-		}
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-		.header-navigation{
-			display: flex;
-			justify-content: start;
-		}
-		.header-navigation button{ display: none; }
-		.header-navigation nav ul{display: flex; list-style: none; grid-gap: var(--gap);}
+<title>Jason Kollias | Front End Developer</title>
 
-		main-container{
-			max-width: 1000px;
-			padding-left: var(--gap);
-			padding-right: var(--gap);
-			margin-left: auto;
-			margin-right: auto;
-			border: 1px solid #f00;
-			display: block;
-		}
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		.__row-p{
-			padding-block: var(--section-p);
-		}
-		.__row-m{
-			margin-block: var(--section-m);
-		}
-	</style>
+<meta name="description" content="Hi, My name is Jason Kollias and I am a Front End Developer/Designer based in New York. My careful eye and strength in CSS and Javascript allows me to develop new and innovative site feature that strengthen brand identity while offering fulfilling experiences to site visitors."/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,900" rel="stylesheet">
+
+<link href="assets/css/reset.css" rel="stylesheet">
+
+<link href="assets/css/theme.css" rel="stylesheet">
+<link href="assets/css/header-footer.css" rel="stylesheet">
+<link href="assets/css/navigation-menu.css" rel="stylesheet">
+<link href="assets/css/icons.css" rel="stylesheet">
 </head>
+
+
+
 <body>
-	<main-container>
-		<header class="site-header "> 
-			<div class="logo"><img src="https://placehold.co/600x400" class="thumb-image"></div>
-			<div class="header-navigation">
-				<button>Open Nav</button>
-				<nav>
-					<ul>
-						<li><a href="#">Link 1</a></li>
-						<li><a href="#">Link 2</a></li>
-						<li><a href="#">Link 3</a></li>
-					</ul>
-				</nav>
-			</div> 
-		</header>
-	</main-container>
 
-	<main>
-		<main-container>
-			<section class=" __row-m">
-				<h2>Filter options</h2>
-				<ul>
-					<li>Filter 1</li>
-					<li>Filter 2</li>
-					<li>Filter 3</li>
-				</ul>
-			</section>
-		</main-container>
-			<style>
-				.project-list {
-					margin: 0;
-					padding: 0;
-				}
-				.project-list li{
-					margin-top: 5px;
-				}
-			</style>
-		<main-container>
-		<ul class="project-list  __row-m">
-			<li>
-				<button class="project-item-btn">
-					<img src="https://placehold.co/600x400" class="thumb-image">
-					<h2>Project 1</h2>
-				</button>
-			</li>
-			<li> 
-				<style>
+<header class="site-header">
+  <div class="site-logo">
+    <a href="/">
+      <img src="assets/img/jkollias-logo-black.png" alt="Jason Kollias | Frontend Developer">
+   </a>
+  </div>
+  
+  <section class="site-nav-wrapper">
+    
+    <button class="open-menu-button" data-target=".site-navigation-menu">
+      <div>Menu</div> 
+      <div class="menu-icon">
+        <div class="hamburger-menu-bars"></div>
+      </div>
+    </button>
+    <nav 
+      class="site-navigation-menu" 
+      aria-labelledby="site-navigation-menu" aria-hidden="true">
+      
+      <button 
+        class="close-menu-button" 
+        data-target=".site-navigation-menu">
+          <div class="close-icon"></div>
+      </button>
 
-					.project-collage-grid{
-						--gap: 5px;
-						display: grid;
-						grid-template-columns: .6fr .4fr;
-						grid-gap: var(--gap);
-					}
 
-					.project-main-image{
-						display: grid;
-						grid-template-columns: .6fr .4fr;
-						grid-template-areas: "main sub-1" "main sub-2";
-						align-items: center;
-						grid-gap: var(--gap);
-					}
-
-					.main-image{
-						grid-area: main;
-					}
-
-					.sub-image{
-						grid-area: sub-1;
-					}
-
-					.sub-image2{
-						grid-area: sub-2;
-					}
-
-					.project-features-grid{
-						display: grid;
-						grid-template-columns: repeat(3, 1fr);
-						grid-gap: var(--gap);
-					}
-
-					.project-item{
-						padding: var(--section-p);
-					}
-
-					.project-feature-grid-item:nth-child(2){
-						display: flex;
-						flex-flow: column-reverse;
-					}
-
-					.project-item-btn{
-						display: grid;
-						grid-template-columns: 100px auto;
-						grid-gap: var(--gap);
-						align-items: center;
-					}
+      <div class="site-navigation-links">
+        <ul>
+        </ul>
+      </div>
  
-				</style>
-				<button aria-expanded="false" aria-controls="project-item-2" aria-describedby="project-item-2" class="project-item-btn">
-					<img src="https://placehold.co/600x400" class="thumb-image">
-					<h2>Project 2</h2>
-				</button>
-				<div class="project-item" id="project-item-2"  >
-					<h2>Project 2</h2>
-					<h3>Project Type</h3>
-					<div class="project-collage-grid" >
-						<div class="project-main-image">
-							<img src="https://placehold.co/600x541" class="main-image">
-							<img src="https://placehold.co/600x400" class="sub-image">
-							<img src="https://placehold.co/600x400" class="sub-image2">
-						</div>
-						<div class="project-features-grid">
-							<div class="project-feature-grid-item">
-								<img src="https://placehold.co/600x400">
-								<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</div>
-							</div>
-							<div class="project-feature-grid-item">
-								<img src="https://placehold.co/600x400">
-								<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</div>
-							</div>
-							<div class="project-feature-grid-item">
-								<img src="https://placehold.co/600x400">
-								<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<button class="project-item-btn">
-					<img src="https://placehold.co/600x400" class="thumb-image"><h2>project 3</h2>
-				</button>
-			</li>
-			<li>
-				<button class="project-item-btn">
-					<img src="https://placehold.co/600x400" class="thumb-image"><h2>project 4</h2>
-				</button>
-			</li>
-			 
-		</ul>
-		</main-container>
-	</main>
-	<style>
-		.site-footer{
-			padding: var(--section-p);
-		}
-	</style>
-	<main-container>
-		<footer class="site-footer ">
-			My footer
-		</footer>
-	</main-container>
+
+    </nav>
+  
+  </section>
+</header>
+ 
+
+
+
+<main class="site-content ">
+
+  <section class="home-page--intro-block">
+
+    <div class="home-page-logo">
+      <img src="assets/img/home/home-logo.png" alt="Jason Kollias">
+    </div>
+    
+    <p class="home-blurb">Hi, My name is Jason Kollias and I am a Front End Developer/Designer based in New York.  My careful eye and strength in CSS and Javascript allows me to develop new and innovative site feature that strengthen brand identity while offering fulfilling experiences to site visitors.</p>
+
+    <a href="projects.html" class="view-my-work--btn">View My Work</a>
+  </section>
+
+
+</main> 
+
+<script src="assets/js/nav-menu.js" type="text/javascript"></script>
+
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119261596-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119261596-1');
+</script>
+
+
 </body>
+
 </html>

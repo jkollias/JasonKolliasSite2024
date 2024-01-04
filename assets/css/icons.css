@@ -1,0 +1,158 @@
+/*
+- Menu Bars
+- Close Icons
+*/
+
+
+
+
+/* Hamburger Bars */
+
+.hamburger-menu-bars{
+	height: .2em;
+	width: 50%;
+	background: #333;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%);
+    font-size: 10px;
+}
+
+.hamburger-menu-bars:before{
+	content: "";
+	display: block;
+	position: absolute;
+	background: #333;
+	top: -.6em;
+	width: 100%;
+	height: .2em;
+}
+
+.hamburger-menu-bars:after{
+	content: "";
+	display: block;
+	position: absolute;
+	background: #333;
+	bottom: -.6em;
+	width: 100%;
+	height: .2em;
+}
+
+
+
+/* Close Icon */
+
+.close-icon{
+	width: 50px;
+	height: 50px;
+}
+
+
+.close-icon:hover:after,
+.close-icon:hover:before{
+	background: #ccc;
+}
+
+.close-icon:after,
+.close-icon:before{
+	content: "";
+	width: 30px;
+	background: #000;
+	height: 2px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%) rotate(45deg);
+	transform-origin: center;
+}
+
+.close-icon:after{
+	transform: translate(-50%) rotate(-45deg);
+}
+
+
+/* Information Icon */
+
+.i-icon{
+	position: relative;
+	display: block;
+}
+
+.i-icon:before{
+	font-size: 1em;
+	content: " i ";
+	font-family: courier;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	transform: translate(-50%,-50%);
+	text-shadow: 0 0 0.9em rgba(0,0,0);
+}
+
+
+.category-icon{
+	position: relative;
+	display: block;
+	width: 3em;
+	height: 2em;
+	font-size: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.category-icon div{
+	display: block;
+	width: .2em;
+	height: .2em;
+	font-size: 1em; // 10px;
+	background: #000;
+	position: relative;
+}
+
+
+.category-icon div:before,
+.category-icon div:after{
+    content: " ";
+	width: .2em;
+	height: .2em;
+	position: absolute;
+	left: -.6em;
+	background: #000;
+}
+
+.category-icon div:after{
+	left: auto;
+	right: -.6em;
+}
+
+
+.right-arrow-icon,
+.left-arrow-icon{
+	display: flex;
+	position: relative;
+}
+
+
+.right-arrow-icon:before,
+.left-arrow-icon:before{
+	width: 1em;
+	height: 1em;
+	transform: translateY(-50%) rotate(45deg);
+	border-right: .1em solid currentColor;
+	border-top: .1em solid currentColor;
+	color: #fff;
+	content: "";
+	display: block;
+	top: 50%;
+	left: .5em;
+	position: absolute;
+}
+
+.left-arrow-icon:before{
+	left: 1em;
+	transform: translateY(-50%) rotate(225deg);
+}
