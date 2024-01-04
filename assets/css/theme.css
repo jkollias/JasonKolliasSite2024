@@ -1,0 +1,266 @@
+:root{
+    --heading-size: 2.4em;
+    --body-size: 1.8em;
+    --small-size: 1.5em;
+    --body-font: "Roboto";
+}
+
+html{ scrollbar-width: thin; }
+
+body{
+    font-family: var(--body-font);
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+.site-content{
+    font-size: 10px;
+    padding: 2em;
+    line-height: 1.5;
+}
+
+/* Page States */
+
+
+
+
+/* Home Page */
+
+.home-blurb{
+    text-align: center;
+    max-width: 28em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-page-logo{
+    width: 10em;
+    margin: 0 auto 2em;
+    display: grid;
+}
+
+.home-page-logo img{
+    place-content: center;
+}
+
+.view-my-work--btn{
+    border-radius: .25em;
+    width: 10em;
+    margin: 5em auto;
+    display: block;
+    background: #000;
+    padding: 1em;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* General Pages */
+
+.page-heading {
+    font-size: clamp( 10px, 2vw, 100px);
+    padding-bottom: 2em;
+
+}
+
+.page-heading h2{
+    font-size: 5em;
+}
+
+.page-heading p{
+    font-size: min(1.5em, 20px);
+    max-width: 20em;
+}
+
+/* Catalog */
+
+.projects-filter-nav{
+    display: none;
+}
+
+.projects-filter{
+    border-radius: .25em;
+    border: .1em solid #000;
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    //grid-template-columns: minmax(10em, max-content);
+    grid-gap: 2em;
+    max-width: 100em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 2em;
+}
+
+.grid-item{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: flex-start;
+    //box-shadow:  0 0 1em rgba(0,0,0,.75);
+    //border: 1px solid #ccc;
+    background: #efefef;
+    padding-bottom: 1em;
+}
+
+.catalog-image{
+    background:#aaa;
+    width: 20em;
+    height: 20em;
+    margin: auto;
+    font-size: 10px;
+    padding-top: 2em;
+    justify-items: center;
+    background: #efefef;
+}
+
+.project-catalog-image{
+    overflow: hidden;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+.project-catalog-image img{
+    width: 100%;
+    height: auto;
+    transition: all .5s;
+    position: absolute;
+    inset: 0 auto auto auto;
+}
+
+.project-catalog-name{
+    padding-top: 1em;
+}
+
+.show-project--btn:hover .project-catalog-image img{
+    width: 110%;
+    inset: -5%  auto auto auto;
+    transition: all .5s;
+}
+
+@media screen and (min-width: 768px){
+    .projects-filter{
+        display: flex;
+        justify-content: center;
+       
+    }
+    
+    .projects-filter button{
+        padding: 1em 2em; 
+    }
+
+    .projects-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.project-detail--container{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(255,255,255,1);
+    padding: 2em;
+    left: 0;
+    overflow: auto;
+}
+
+ .project-detail--container[aria-hidden="true"]{
+    top: -100vh;
+    z-index: -100;
+    height: 0;
+    width: 0;
+    left: -100vw;
+    overflow: hidden;
+}
+
+.project-detail--container[aria-hidden="false"]{  
+    top: 0;
+    z-index: 3010;
+}
+
+.project-detail{
+    background: #fff;
+    padding: 1em;
+    max-width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-detail a{
+    color: #d00;
+}
+
+.project-description{
+    position:fixed;
+    height: 100vh;
+    top: 0;
+    color: #fff;
+    background: #333;
+    padding: 2em;
+    //width: clamp(300px, 80vw, 400px);
+    width: 300px;
+    transition: right .25s ease-in;
+}
+
+.project-description[aria-hidden="false"]{
+    right: 0;
+}
+
+.project-description[aria-hidden="true"]{
+    right: -300px;
+}
+
+.project-feature, .project-credits{
+    padding-top: 1em;
+}
+
+.project-credits ul{
+    padding-top: .5em;
+}
+
+.project-detail--container[aria-hidden="false"] .view-description--btn{
+    position: absolute;
+    top: 3em; 
+    left: -3em;
+    width: 6em;
+    height: 6em;
+    font-size: 15px;
+    background: #333;
+    border-radius: 50% 0 0 50%;
+    z-index: 0;
+}
+
+.close-project-detail--btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 10px; 
+    width: 4em;
+    height: 4em;
+}
+
+.project-description--text{
+    background: #222;
+    z-index: 1;
+    padding: 1em;
+    position: absolute;
+    width: calc(100% - 3.5em); 
+    box-sizing: border-box;
+}
+
+
+.about-page h2{
+    //padding-top: 1em;
+    //font-size: var(--heading-size);
+}
+
+.about-page p{
+    padding-top: 1em;
+    //font-size: var(--body-size);
+}

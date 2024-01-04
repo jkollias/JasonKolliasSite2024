@@ -1,0 +1,84 @@
+/* 
+1) Header Layout
+2) Logo
+3) Menu button
+3) Navigation
+4) Footer	
+*/
+
+
+/* 
+1) Header Layout
+======================= 
+*/
+
+.site-header{
+	display: grid;
+	grid-template-columns: 1fr 1fr; 
+	border-bottom: 1px solid #efefef;
+	padding: .25em .5em;
+	//font-size: clamp(16px, 3vw, 18px);
+	font-size: 16px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	z-index: 3000;
+	align-items: center;
+}
+
+.site-content{
+	font-size: 16px;
+	padding-top: 6em;
+}
+
+.site-logo{
+	width: 8em;
+}
+
+.site-logo img{
+	width: 100%;
+	height: auto;
+}
+
+
+.open-menu-button{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.menu-icon{
+	width: 35px;
+	height: 25px;
+	display: block;
+	position: relative;
+	text-align: center;
+	margin-left: 5px;
+}
+
+
+/* 
+4) Footer
+======================= 
+*/
+
+.site-footer{
+	border-top: .1em solid #ccc;
+	padding: 1em;
+	font-size: clamp(16px, 3vw, 18px);
+}
+
+
+.screen-reader-text{
+	position: fixed;
+	top: -1000px;
+}
+
+
+
+body.disable-browser-scroll{
+  overflow-y: hidden;
+}
