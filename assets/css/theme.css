@@ -2,8 +2,16 @@
     --heading-size: 2.4em;
     --body-size: 1.8em;
     --small-size: 1.5em;
-    --body-font: "Roboto";
+    --body-font: "Roboto"; 
+    --gap: 20px;
+    --section-m: var(--top-p) inherit;
+    --section-p: var(--top-p) inherit;
+    --top-p: 50px;
+    --bottom-p: var(--top-p);
+    --top-m: var(--top-p);
+    --bottom-m: var(--top-p);
 }
+ 
 
 html{ scrollbar-width: thin; }
 

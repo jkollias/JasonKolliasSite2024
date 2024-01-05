@@ -1,0 +1,59 @@
+.project-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.project-list li {
+    margin-top: 5px;
+}
+
+
+.project-collage-grid {
+    --gap: 5px;
+    display: grid;
+    grid-template-columns: .6fr .4fr;
+    grid-gap: var(--gap);
+}
+
+.project-main-image {
+    display: grid;
+    grid-template-columns: .6fr .4fr;
+    grid-template-areas: "main sub-1""main sub-2";
+    align-items: center;
+    grid-gap: var(--gap);
+}
+
+.main-image {
+    grid-area: main;
+}
+
+.sub-image {
+    grid-area: sub-1;
+}
+
+.sub-image2 {
+    grid-area: sub-2;
+}
+
+.project-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: var(--gap);
+}
+
+.project-item {
+    padding: var(--section-p);
+}
+
+.project-feature-grid-item:nth-child(2) {
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+.project-item-btn {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-gap: var(--gap);
+    align-items: center;
+}
