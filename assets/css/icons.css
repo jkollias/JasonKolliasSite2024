@@ -8,7 +8,7 @@
 
 /* Hamburger Bars */
 
-.hamburger-menu-bars{
+.__hamburger-menu-bars{
 	height: .2em;
 	width: 50%;
 	background: #333;
@@ -19,7 +19,7 @@
     font-size: 10px;
 }
 
-.hamburger-menu-bars:before{
+.__hamburger-menu-bars:before{
 	content: "";
 	display: block;
 	position: absolute;
@@ -29,7 +29,7 @@
 	height: .2em;
 }
 
-.hamburger-menu-bars:after{
+.__hamburger-menu-bars:after{
 	content: "";
 	display: block;
 	position: absolute;
@@ -43,19 +43,19 @@
 
 /* Close Icon */
 
-.close-icon{
+.__close-icon{
 	width: 50px;
 	height: 50px;
 }
 
 
-.close-icon:hover:after,
-.close-icon:hover:before{
+.__close-icon:hover:after,
+.__close-icon:hover:before{
 	background: #ccc;
 }
 
-.close-icon:after,
-.close-icon:before{
+.__close-icon:after,
+.__close-icon:before{
 	content: "";
 	width: 30px;
 	background: #000;
@@ -67,19 +67,19 @@
 	transform-origin: center;
 }
 
-.close-icon:after{
+.__close-icon:after{
 	transform: translate(-50%) rotate(-45deg);
 }
 
 
 /* Information Icon */
 
-.i-icon{
+.__i-icon{
 	position: relative;
 	display: block;
 }
 
-.i-icon:before{
+.__i-icon:before{
 	font-size: 1em;
 	content: " i ";
 	font-family: courier;
@@ -92,7 +92,7 @@
 }
 
 
-.category-icon{
+.__category-icon{
 	position: relative;
 	display: block;
 	width: 3em;
@@ -104,7 +104,7 @@
 	justify-content: space-evenly;
 }
 
-.category-icon div{
+.__category-icon div{
 	display: block;
 	width: .2em;
 	height: .2em;
@@ -114,8 +114,8 @@
 }
 
 
-.category-icon div:before,
-.category-icon div:after{
+.__category-icon div:before,
+.__category-icon div:after{
     content: " ";
 	width: .2em;
 	height: .2em;
@@ -124,21 +124,21 @@
 	background: #000;
 }
 
-.category-icon div:after{
+.__category-icon div:after{
 	left: auto;
 	right: -.6em;
 }
 
 
-.right-arrow-icon,
-.left-arrow-icon{
+.__right-arrow-icon,
+.__left-arrow-icon{
 	display: flex;
 	position: relative;
 }
 
 
-.right-arrow-icon:before,
-.left-arrow-icon:before{
+.__right-arrow-icon:before,
+.__left-arrow-icon:before{
 	width: 1em;
 	height: 1em;
 	transform: translateY(-50%) rotate(45deg);
@@ -152,7 +152,7 @@
 	position: absolute;
 }
 
-.left-arrow-icon:before{
+.__left-arrow-icon:before{
 	left: 1em;
 	transform: translateY(-50%) rotate(225deg);
 }

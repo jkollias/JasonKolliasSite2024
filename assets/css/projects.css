@@ -5,7 +5,9 @@
 }
 
 .project-list li {
-    margin-top: 5px;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: [full-width-start];
 }
 
 
@@ -13,7 +15,10 @@
     --gap: 5px;
     display: grid;
     grid-template-columns: .6fr .4fr;
-    grid-gap: var(--gap);
+    grid-gap: calc(var(--gap) * 5);
+    padding: 50px;
+    background-image: linear-gradient(#fff, #efefef);
+    border-bottom: 1px solid #aaa;
 }
 
 .project-main-image {
@@ -57,3 +62,5 @@
     grid-gap: var(--gap);
     align-items: center;
 }
+
+ 
