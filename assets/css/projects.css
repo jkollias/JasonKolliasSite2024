@@ -1,4 +1,14 @@
 .project-list {
+    /*margin: 0;
+    padding: 0;
+    list-style: none;*/
+    display: grid;
+        grid-template-columns: 
+            [full-width-start breakout-left-start] minmax(1rem, 1fr)  
+            [content-start breakout-right-start] min(100% - 2rem, 60rem)  
+            [content-end breakout-left-end] minmax(1rem, 1fr) 
+            [breakout-right-end full-width-end];
+         
     margin: 0;
     padding: 0;
     list-style: none;
@@ -6,8 +16,12 @@
 
 .project-list li {
     margin-top: 25px;
-    display: grid;
-    grid-template-columns: [full-width-start];
+    grid-column: content;
+    display: grid; 
+}
+
+.project-list li.full{
+    grid-column: full-width; 
 }
 
 
