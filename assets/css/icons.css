@@ -8,6 +8,10 @@
 
 /* Hamburger Bars */
 
+.__menu-icon{
+	position: relative;
+}
+
 .__hamburger-menu-bars{
 	height: .2em;
 	width: 50%;
