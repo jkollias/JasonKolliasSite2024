@@ -4,6 +4,7 @@
     --small-size: 1.5em;
     --body-font: "Roboto"; 
     --gap: 20px;
+    --container-width: 1000px;
     --section-m: var(--top-p) inherit;
     --section-p: var(--top-p) inherit;
     --top-p: 50px;
