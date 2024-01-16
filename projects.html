@@ -71,16 +71,46 @@
   </header>
 </main-container>
 
+<style>
+  .filter-button--list{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    column-gap: var(--gap);
+  }
 
+
+
+  .__filter-btn--image{
+    margin-bottom: var(--gap);
+  }
+
+ 
+</style>
 
 <main class="site-content ">
  <main-container>
       <section class=" __row-m">
         <h2>Filter options</h2>
-        <ul>
-          <li>Filter 1</li>
-          <li>Filter 2</li>
-          <li>Filter 3</li>
+        <ul class="filter-button--list">
+          <li>
+            <button class="__default-btn">
+              <div class="__filter-btn--image"><img src="https://placehold.co/100x200" ></div>
+              <div>Filter 1</div>
+            </button>
+          </li>
+          <li>
+            <button class="__default-btn">
+              <div class="__filter-btn--image"><img src="https://placehold.co/100x200" ></div>
+              <div>Filter 2</div>
+            </button>
+          </li>
+          <li>
+            <button class="__default-btn">
+              <div class="__filter-btn--image"><img src="https://placehold.co/100x200" ></div>
+              <div>Filter 3</div>
+            </button>
+          </li>
         </ul>
       </section>
     </main-container>
