@@ -9,24 +9,55 @@
             [content-start] min(100% - 2rem, 1000px)  
             [content-end] minmax(1rem, 1fr) 
             [highlight-end] minmax(1rem, .25fr) 
-            [full-width-end];*/
-         
+            [full-width-end];*/      
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.project-list li {
+
+
+.project-list__item {
     margin-top: 25px;
     grid-column: content;
+    display: grid;
+    grid-template-columns: repeat(1, .5fr);
+    grid-template-areas: 
+        "image title" 
+        "materials materials" 
+        "description description" 
+        "links links";
+
 }
 
-.project-list li.highlight{
+.project-list__thumb-image{
+    grid-area: image;
+}
+
+.project-list__title{
+    grid-area: title;
+}
+
+.project-list__materials{
+    grid-area: materials;
+}
+
+.project-list__description{
+    grid-area: description;
+}
+
+.project-list__sample-links{
+    grid-area: links;
+}
+
+.project-list__item.highlight{
     grid-column: full-width; 
     border-top: 1px solid #aaa;
     border-bottom: 1px solid #aaa;
     padding-top: 50px;
 }
+
+
 
 
 .project-collage-grid {
@@ -98,7 +129,7 @@
 
 .project-item-btn {
     display: grid;
-    grid-template-columns: 100px auto;
+    //grid-template-columns: 100px auto;
     grid-gap: var(--gap);
     align-items: center;
 }
@@ -107,4 +138,26 @@
     text-align: left;
 }
 
- 
+
+.project-list__materials{
+/*        display: flex; */
+        text-align: left;
+      }
+
+.project-list__materials-list{
+    --gap: 10px;
+    display: flex; 
+    margin: 0;
+    padding: 0;
+    gap: var(--gap);
+}
+
+.project-list__materials-list li{ 
+    background: #ccc;
+    list-style: none;
+    margin: 0; 
+    padding: var(--gap);
+    border-radius: calc( var(--border-radius) * 2);
+    display: inline-block;
+    font-size: 12px;
+}

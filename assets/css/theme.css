@@ -11,6 +11,7 @@
     --bottom-p: var(--top-p);
     --top-m: var(--top-p);
     --bottom-m: var(--top-p);
+    --border-radius: calc( var(--gap) * .5 );
 }
  
 

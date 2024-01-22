@@ -1,5 +1,5 @@
 
- :where(main-container, .main-container){
+ :where(main-container, .__main-container){
       max-width: var(--container-width);
       padding-left: var(--gap);
       padding-right: var(--gap);
