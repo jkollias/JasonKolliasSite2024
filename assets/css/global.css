@@ -1,5 +1,5 @@
 
-main-container{
+ :where(main-container, .__main-container){
       max-width: var(--container-width);
       padding-left: var(--gap);
       padding-right: var(--gap);
@@ -7,6 +7,18 @@ main-container{
       margin-right: auto; 
       display: block;
 }
+
+@media screen and (max-width: 767px){
+  .__full-width--m{
+    max-width: 100%;
+  }  
+
+  .__no-bleed--m{
+    padding-left: 0;
+    padding-right: 0;
+  } 
+}
+
 
 .__row-p{
     padding-block: var(--section-p);
