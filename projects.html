@@ -24,7 +24,7 @@
 <link href="assets/css/global.css" rel="stylesheet">
 <link href="assets/css/icons.css" rel="stylesheet">
 
-<link href="assets/css/projects.css" rel="stylesheet">
+<link href="assets/css/project-list.css" rel="stylesheet">
 
 </head>
 
@@ -72,6 +72,65 @@
 </main-container>
 
 <style>
+  .__page-title{
+    height: 100vh;
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12vw;
+    color: #fff;
+    position: relative;
+  }
+
+  @keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+  .__page-title::after{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    border-radius: 0 100% 0 0;
+    display: block;
+    background-color: #fff;
+  }
+
+  @media screen and (min-width: 768px){
+    .__page-title{
+      font-size: 100px;
+      height: 800px;
+    }
+    .__page-title::after{
+      border-radius: 0 150% 0 0;
+    }
+  }
+</style>
+
+<main class="site-content ">
+
+
+  <div class="__page-title">
+    
+      <h1>Projects</h1>
+
+  </div>
+
+  
+<style>
   .filter-button--list{
     display: flex;
     list-style: none;
@@ -88,42 +147,55 @@
  
 </style>
 
-<main class="site-content ">
-  
+
   <main-container class="__full-width--m __no-bleed--m">
       <section class=" __row-m">
         <h2>Filter options</h2>
         <ul class="filter-button--list">
           <li>
-            <button class="__default-btn">
-              <div class="__filter-btn--image"><img src="https://placehold.co/100x200" ></div>
-              <div>Filter 1</div>
+            <button class="__default-btn"> 
+              <div>Websites</div>
             </button>
           </li>
           <li>
-            <button class="__default-btn">
-              <div class="__filter-btn--image"><img src="https://placehold.co/100x200" ></div>
-              <div>Filter 2</div>
+            <button class="__default-btn"> 
+              <div>Landing Pages</div>
             </button>
           </li>
           <li>
-            <button class="__default-btn">
-              <div class="__filter-btn--image"><img src="https://placehold.co/100x200" ></div>
-              <div>Filter 3</div>
+            <button class="__default-btn"> 
+              <div>Scripts</div>
+            </button>
+          </li>
+          <li>
+            <button class="__default-btn"> 
+              <div>Shopify Sections</div>
+            </button>
+          </li>
+          <li>
+            <button class="__default-btn"> 
+              <div>Personal Projects</div>
             </button>
           </li>
         </ul>
       </section>
     </main-container>
-    <style>
-      
-
-    </style>
+ 
      
     <ul class="project-list  __row-m __main-container" >
       <li class="project-list__item"> 
           <img src="https://placehold.co/600x400" class="project-list__thumb-image">
           <h2 class="project-list__title">Project 1 Title</h2>
+          
+          <div class="project-list__filter-tags">
+            <ul class="project-list__filter-tags-list">
+              <li>Landing Pages</li>
+              <li>Javascript</li>
+              <li>Shopify Sections</li>
+              <li>Theme Modifications</li>
+            </ul>     
+          </div>
+
           <div class="project-list__materials">
             Made with: 
             <ul class="project-list__materials-list">
