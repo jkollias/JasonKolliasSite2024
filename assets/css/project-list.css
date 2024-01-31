@@ -1,5 +1,5 @@
 .project-list { 
-    padding: 0;
+    padding: 0 var(--gap);
     margin-left: auto;
     margin-right: auto;
     list-style: none;

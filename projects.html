@@ -23,7 +23,7 @@
 <link href="assets/css/navigation-menu.css" rel="stylesheet">
 <link href="assets/css/global.css" rel="stylesheet">
 <link href="assets/css/icons.css" rel="stylesheet">
-
+<link href="assets/css/filter.css" rel="stylesheet"> 
 <link href="assets/css/project-list.css" rel="stylesheet">
 
 </head>
@@ -72,52 +72,7 @@
 </main-container>
 
 <style>
-  .__page-title{
-    height: 100vh;
-      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 12vw;
-    color: #fff;
-    position: relative;
-  }
-
-  @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-  .__page-title::after{
-    content: " ";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    border-radius: 0 100% 0 0;
-    display: block;
-    background-color: #fff;
-  }
-
-  @media screen and (min-width: 768px){
-    .__page-title{
-      font-size: 100px;
-      height: 800px;
-    }
-    .__page-title::after{
-      border-radius: 0 150% 0 0;
-    }
-  }
+ 
 </style>
 
 <main class="site-content ">
@@ -128,29 +83,12 @@
       <h1>Projects</h1>
 
   </div>
-
-  
-<style>
-  .filter-button--list{
-    display: flex;
-    list-style: none;
-    margin: 0;
-    column-gap: var(--gap);
-  }
-
-
-
-  .__filter-btn--image{
-    margin-bottom: var(--gap);
-  }
-
  
-</style>
 
 
   <main-container class="__full-width--m __no-bleed--m">
-      <section class=" __row-m">
-        <h2>Filter options</h2>
+      <filter class=" __row-m">
+        <h2>Filter Options</h2>
         <ul class="filter-button--list">
           <li>
             <button class="__default-btn"> 
@@ -178,9 +116,30 @@
             </button>
           </li>
         </ul>
-      </section>
+      </filter>
     </main-container>
- 
+
+
+<script>
+
+  const ActiveItemManager = {
+    
+    construction(collection, cssClass){
+      this.collection = collection;
+      this.cssClass = cssClass;
+    }
+
+    addClickEvent(){
+        for(let item of this.collection){
+          item.addEventListener("click", function(){
+            item.classList.add(this.cssClass);
+          });
+        }
+    }
+
+  }
+
+</script>
      
     <ul class="project-list  __row-m __main-container" >
       <li class="project-list__item"> 
