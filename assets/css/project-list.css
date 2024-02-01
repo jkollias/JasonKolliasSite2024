@@ -1,32 +1,39 @@
-.project-list {
-    /*margin: 0;
-    padding: 0;
-    list-style: none;*/
-    display: grid;
-        /*grid-template-columns: 
-            [full-width-start] minmax(1rem, 1fr)  
-            [highlight-start] minmax(1rem, .25fr) 
-            [content-start] min(100% - 2rem, 1000px)  
-            [content-end] minmax(1rem, 1fr) 
-            [highlight-end] minmax(1rem, .25fr) 
-            [full-width-end];*/      
-    margin: 0;
-    padding: 0;
+.project-list { 
+    padding: 0 var(--gap);
+    margin-left: auto;
+    margin-right: auto;
     list-style: none;
+    line-height: 1.5;
 }
 
 
 
 .project-list__item {
+    border-top: 1px solid #ccc;
+    padding-top: 25px;
     margin-top: 25px;
     grid-column: content;
     display: grid;
+    gap: var(--gap);
     grid-template-columns: repeat(1, .5fr);
     grid-template-areas: 
         "image title" 
+        "image tags"
         "materials materials" 
         "description description" 
-        "links links";
+        "links links"; 
+}
+
+@media screen and (min-width: 768px){
+    .project-list__item { 
+        grid-template-columns: 300px auto;
+        grid-template-areas: 
+            "image title" 
+            "image tags"
+            "image materials" 
+            "image description" 
+            "image links"; 
+    }
 
 }
 
@@ -36,6 +43,10 @@
 
 .project-list__title{
     grid-area: title;
+}
+
+.project-list__filter-tags{
+    grid-area: tags;
 }
 
 .project-list__materials{
@@ -138,26 +149,40 @@
     text-align: left;
 }
 
-
-.project-list__materials{
-/*        display: flex; */
-        text-align: left;
-      }
-
-.project-list__materials-list{
+.project-list__filter-tags-list{
+    margin-left: 0;
     --gap: 10px;
-    display: flex; 
-    margin: 0;
-    padding: 0;
-    gap: var(--gap);
 }
 
-.project-list__materials-list li{ 
-    background: #ccc;
+.project-list__filter-tags-list li{
+    background: #efefef;
     list-style: none;
     margin: 0; 
     padding: var(--gap);
     border-radius: calc( var(--border-radius) * 2);
+    display: inline-block;
+    font-size: 12px;
+}
+
+
+.project-list__materials{
+    display: flex;
+    text-align: left;
+    align-items: center;
+    gap: var(--gap);
+}
+
+.project-list__materials-list{ 
+    display: flex; 
+    margin: 0;
+    padding: 0;
+    gap: var(--gap);
+    align-items: center;
+}
+
+.project-list__materials-list li{  
+    list-style: none;
+    margin: 0;  
     display: inline-block;
     font-size: 12px;
 }

@@ -12,6 +12,7 @@
     --top-m: var(--top-p);
     --bottom-m: var(--top-p);
     --border-radius: calc( var(--gap) * .5 );
+    --line-height: 1.5;
 }
  
 
@@ -36,11 +37,16 @@ body{
 
 /* Home Page */
 
+.home-page--intro-block{
+    margin-top: 200px;
+}
+
 .home-blurb{
     text-align: center;
     max-width: 28em;
     margin-left: auto;
     margin-right: auto;
+    line-height: var(--line-height);
 }
 
 .home-page-logo{

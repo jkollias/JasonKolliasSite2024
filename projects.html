@@ -23,8 +23,8 @@
 <link href="assets/css/navigation-menu.css" rel="stylesheet">
 <link href="assets/css/global.css" rel="stylesheet">
 <link href="assets/css/icons.css" rel="stylesheet">
-
-<link href="assets/css/projects.css" rel="stylesheet">
+<link href="assets/css/filter.css" rel="stylesheet"> 
+<link href="assets/css/project-list.css" rel="stylesheet">
 
 </head>
 
@@ -72,58 +72,89 @@
 </main-container>
 
 <style>
-  .filter-button--list{
-    display: flex;
-    list-style: none;
-    margin: 0;
-    column-gap: var(--gap);
-  }
-
-
-
-  .__filter-btn--image{
-    margin-bottom: var(--gap);
-  }
-
  
 </style>
 
 <main class="site-content ">
-  
+
+
+  <div class="__page-title">
+    
+      <h1>Projects</h1>
+
+  </div>
+ 
+
+
   <main-container class="__full-width--m __no-bleed--m">
-      <section class=" __row-m">
-        <h2>Filter options</h2>
+      <filter class=" __row-m">
+        <h2>Filter Options</h2>
         <ul class="filter-button--list">
           <li>
-            <button class="__default-btn">
-              <div class="__filter-btn--image"><img src="https://placehold.co/100x200" ></div>
-              <div>Filter 1</div>
+            <button class="__default-btn"> 
+              <div>Websites</div>
             </button>
           </li>
           <li>
-            <button class="__default-btn">
-              <div class="__filter-btn--image"><img src="https://placehold.co/100x200" ></div>
-              <div>Filter 2</div>
+            <button class="__default-btn"> 
+              <div>Landing Pages</div>
             </button>
           </li>
           <li>
-            <button class="__default-btn">
-              <div class="__filter-btn--image"><img src="https://placehold.co/100x200" ></div>
-              <div>Filter 3</div>
+            <button class="__default-btn"> 
+              <div>Scripts</div>
+            </button>
+          </li>
+          <li>
+            <button class="__default-btn"> 
+              <div>Shopify Sections</div>
+            </button>
+          </li>
+          <li>
+            <button class="__default-btn"> 
+              <div>Personal Projects</div>
             </button>
           </li>
         </ul>
-      </section>
+      </filter>
     </main-container>
-    <style>
-      
 
-    </style>
+
+<script>
+
+  const ActiveItemManager = {
+    
+    construction(collection, cssClass){
+      this.collection = collection;
+      this.cssClass = cssClass;
+    }
+
+    addClickEvent(){
+        for(let item of this.collection){
+          item.addEventListener("click", function(){
+            item.classList.add(this.cssClass);
+          });
+        }
+    }
+
+  }
+
+</script>
      
     <ul class="project-list  __row-m __main-container" >
       <li class="project-list__item"> 
           <img src="https://placehold.co/600x400" class="project-list__thumb-image">
           <h2 class="project-list__title">Project 1 Title</h2>
+          
+          <div class="project-list__filter-tags">
+            <ul class="project-list__filter-tags-list">
+              <li>Landing Pages</li>
+              <li>Javascript</li>
+              <li>Shopify Sections</li>
+              <li>Theme Modifications</li>
+            </ul>     
+          </div>
+
           <div class="project-list__materials">
             Made with: 
             <ul class="project-list__materials-list">
